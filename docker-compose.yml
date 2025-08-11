@@ -1,0 +1,11 @@
+services:
+  kb-backend:
+    build: .
+    ports:
+      - '5055:5055'
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - API_KEY=${API_KEY}
+      - LLAMA_MODEL_PATH=${LLAMA_MODEL_PATH}
+    volumes:
+      - ./vectorstore:/app/vectorstore

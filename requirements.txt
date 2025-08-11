@@ -1,0 +1,16 @@
+flask
+gunicorn
+sentence-transformers
+faiss-cpu
+beautifulsoup4
+python-docx
+pypdf
+tqdm
+pandas
+openai
+python-dotenv
+xlrd
+openpyxl
+llama-cpp-python
+transformers
+torch
