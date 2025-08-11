@@ -4,4 +4,3 @@ models/
 .venv/
 vectorstore/*
 !vectorstore/.gitkeep
-*.zip
