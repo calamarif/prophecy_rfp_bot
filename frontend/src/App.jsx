@@ -88,6 +88,7 @@ export default function App(){
         <button
           onClick={handleAsk}
           disabled={!question.trim() || !apiKey.trim()}
+          className="ask-btn"
           style={{
             marginTop: '1rem',
             backgroundColor: '#433E8C',
