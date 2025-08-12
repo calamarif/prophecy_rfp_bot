@@ -5,3 +5,10 @@ models/
 vectorstore/*
 !vectorstore/.gitkeep
 *.zip
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
