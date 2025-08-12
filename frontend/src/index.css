@@ -1,1 +1,11 @@
-body { margin: 0; padding: 0; }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* small Prophecy-like customizations */
+:root{
+  --prophecy-blue:#0052CC;
+  --prophecy-teal:#00BFA5;
+}
+body { background:#F6F8FA; }
+.header { background: linear-gradient(90deg,var(--prophecy-blue),#3a6edd); }
