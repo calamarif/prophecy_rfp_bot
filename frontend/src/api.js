@@ -27,7 +27,7 @@ const handleAsk = async () => {
 export async function uploadBatch(file, apiKey){
   const fd = new FormData();
   fd.append('file', file)
-  const r = await fetch('/ask_batch', {
+  const r = await fetch('/upload_excel', {
     method: 'POST',
     headers: { 'X-API-KEY': apiKey },
     body: fd

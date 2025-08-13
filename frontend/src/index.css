@@ -30,21 +30,21 @@ button:disabled {
 }
 
 button.save-btn {
-  background-color: #E78A57;
+  background-color: #FD7934;
   color: white;
 }
 
 button.save-btn:hover:not(:disabled) {
-  background-color: #d2764a;
+  background-color: #FD7934;
 }
 
 button.ask-btn {
-  background-color: #433E8C;
+  background-color: #4f55ba;
   color: white;
 }
 
 button.ask-btn:hover:not(:disabled) {
-  background-color: #372e6f;
+  background-color: #4f55ba;
 }
 
 textarea {
@@ -85,3 +85,4 @@ input[type="file"] {
   padding-left: 1.2rem;
   margin: 0;
 }
+
