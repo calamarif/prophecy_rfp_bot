@@ -4,6 +4,8 @@
   --button-color: #FD7934;
   --button-hover: #d97c4b;
   --text-color: #333;
+  --success-color: #28a745;
+  --success-hover: #218838;
 }
 
 body {
@@ -20,11 +22,27 @@ body {
 }
 
 .app-header {
+  margin-bottom: 20px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.app-title {
   font-size: 1.8rem;
   font-weight: bold;
   color: var(--main-color);
-  margin-bottom: 20px;
-  text-align: center;
+  margin: 0;
 }
 
 .app-content {
@@ -125,6 +143,11 @@ body {
   margin-bottom: 10px;
 }
 
+.file-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .upload-button {
   width: 100%;
   padding: 10px;
@@ -134,14 +157,106 @@ body {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .upload-button:disabled {
   background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.upload-button:not(:disabled):hover {
+  background-color: var(--button-hover);
 }
 
 .upload-status {
   margin-top: 10px;
   font-weight: bold;
-  color: #4F55BA;
+  color: var(--main-color);
+}
+
+/* Results Section */
+.results-section {
+  margin-top: 20px;
+  border-top: 2px solid var(--background-color);
+  padding-top: 20px;
+}
+
+.results-header {
+  background-color: var(--background-color);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.results-header h3 {
+  color: var(--success-color);
+  margin: 0 0 8px 0;
+  font-size: 1.3rem;
+}
+
+.results-header p {
+  margin: 0 0 15px 0;
+  color: var(--text-color);
+}
+
+.download-button {
+  background-color: var(--success-color);
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.download-button:hover {
+  background-color: var(--success-hover);
+}
+
+.results-preview h4 {
+  color: var(--main-color);
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.result-item {
+  background-color: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.result-question {
+  color: var(--main-color);
+  font-weight: 600;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.result-answer {
+  color: var(--text-color);
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.result-refs {
+  color: #666;
+  font-size: 0.9rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.more-results {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: var(--background-color);
+  border-radius: 6px;
 }
