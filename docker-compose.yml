@@ -1,6 +1,7 @@
 services:
   kb-backend:
     build: .
+    restart: always
     ports:
       - '5055:5055'
     environment:
@@ -9,4 +10,3 @@ services:
       - LLAMA_MODEL_PATH=${LLAMA_MODEL_PATH}
     volumes:
       - ./vectorstore:/app/vectorstore
-    restart: always
