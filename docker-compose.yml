@@ -9,3 +9,4 @@ services:
       - LLAMA_MODEL_PATH=${LLAMA_MODEL_PATH}
     volumes:
       - ./vectorstore:/app/vectorstore
+    restart: always
