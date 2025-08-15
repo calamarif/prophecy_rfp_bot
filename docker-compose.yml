@@ -1,5 +1,6 @@
 services:
   kb-backend:
+    restart: always
     build: .
     ports:
       - '5055:5055'
