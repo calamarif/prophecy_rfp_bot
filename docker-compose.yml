@@ -4,9 +4,13 @@ services:
     build: .
     ports:
       - '5055:5055'
-    environment:
-      - OPENAI_API_KEY=${OPENAI_API_KEY}
-      - API_KEY=${API_KEY}
-      - LLAMA_MODEL_PATH=${LLAMA_MODEL_PATH}
+    env_file: .env
     volumes:
       - ./vectorstore:/app/vectorstore
+
+  cloudflared_prophecy_rfp_bot:
+    container_name: cloudflared_prophecy_rfp_bot
+    env_file: .env
+    restart: unless-stopped
+    image: cloudflare/cloudflared:latest
+    command:  tunnel --no-autoupdate run --token ${CLOUDFLARED_TOKEN}
