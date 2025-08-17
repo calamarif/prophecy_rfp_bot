@@ -1,4 +1,5 @@
 services:
+  # This is a comment to test if the file is being saved
   kb-backend:
     build: .
     ports:
