@@ -10,13 +10,6 @@ services:
 
   cloudflared_prophecy_rfp_bot:
     container_name: cloudflared_prophecy_rfp_bot
-    restart: unless-stopped
-    image: cloudflare/cloudflared:latest
-    command:  tunnel --no-autoupdate run --token eyJhIjoiMzhmZjkwZWMwYTFkOGJiMzJiY2EyYTBmNzgzYmY4Y2EiLCJ0IjoiYjI4NGVkZmQtMzNjOC00MTMzLTlmZTEtN2ExMzk1OTMwMmMyIiwicyI6Ik9XTXpPVEpoTXpNdFlqQTJNQzAwWlRVeExUa3dZelF0TkdGa05tWTFZalZqWm1aaiJ9
-
-
-  cloudflared_prophecy_rfp_bot:
-    container_name: cloudflared_prophecy_rfp_bot
     env_file: .env
     restart: unless-stopped
     image: cloudflare/cloudflared:latest
